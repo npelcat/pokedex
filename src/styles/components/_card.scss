@@ -1,0 +1,59 @@
+.card {
+  position: relative;
+  height: 200px;
+  width: 300px;
+  border-radius: 4px;
+  transition: 0.3s;
+
+  h2 {
+    font-size: 1rem;
+  }
+
+  &:hover {
+    transform: scale(1.2);
+    z-index: 2;
+  }
+
+  &:hover .infos {
+    opacity: 1;
+    transform: scaleY(1);
+  }
+
+  .infos {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.7);
+    color: $white;
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    opacity: 0;
+    transform: scaleY(0);
+    transition: 0.3s;
+  }
+  .title{
+    font-size: 1.2rem;
+    color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(128, 128, 128, 0.3);
+    border-radius: 5px;
+    padding: 5px;
+  }
+  .undertitle{
+    font-size: 0.8rem;
+    color: aqua;
+  }
+  img {
+    height: 200px;
+    width: 200px;
+    border-radius: 10px;
+  }
+}

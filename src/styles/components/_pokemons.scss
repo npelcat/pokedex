@@ -1,0 +1,94 @@
+.pokemons {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 0 auto;
+
+  .filters-container {
+    position: relative;
+    max-width: 800px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 20px;
+    background: $color-3;
+    border-radius: 20px;
+    padding: 10px;
+    color: $white;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.452);
+
+    .range {
+      width: 90%;
+      margin-bottom : 20px;
+      transform: translateY(1px);
+
+      span {
+        padding: 5px;
+        border-radius: 50px;
+        background-color: rgba(255, 255, 255, 0.15);
+      }
+    }
+
+    input[type="range"] {
+      padding: 10px;
+    }
+
+    .radio-group {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    input[type="radio"] {
+      margin-right: 10px;
+    }
+
+    label {
+      margin: 0 20px 0 6px;
+      cursor: pointer;
+
+      &:hover{
+        color: aqua;
+      }
+    }
+  }
+  input[type="text"] {
+    padding: 10px;
+    border-radius: 40px;
+    font-size: 1.3rem;
+    border: 3px solid $color-1;
+    outline: none;
+    transition: 0.4s;
+    text-align: center;
+    width: 400px;
+    margin-bottom: 20px;
+
+    &:focus {
+      background: $color-1;
+      border-radius: 4px;
+      color: $white;
+    }
+  }
+
+  button {
+    margin: 0 auto 20px;
+    background: none;
+    border: 2px solid $color-1;
+    padding: 4px 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.2s;
+
+    &:hover {
+      background: $color-1;
+    }
+  }
+
+  ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
