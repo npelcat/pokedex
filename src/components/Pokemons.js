@@ -33,6 +33,7 @@ const Pokemons = () => {
     <div className="pokemons">
       <ul className="filters-container">
         <div className="range">
+          <div>{rangeValue} </div>
           <span>0</span>
           <input
             type="range"
@@ -69,12 +70,12 @@ const Pokemons = () => {
       )}
       <ul>
         {data.pokemon
-          .slice(0, rangeValue)
           .filter(
             (pokemon) =>
               selectedRadio === "" ||
               pokemon.type.some((pokemonType) => pokemonType === selectedRadio)
           )
+          .slice(0, rangeValue)
           .map((pokemon, index) => (
             <Card key={index} pokemon={pokemon} />
           ))}

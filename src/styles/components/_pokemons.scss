@@ -24,7 +24,9 @@
       margin-bottom : 20px;
       transform: translateY(1px);
 
-      span {
+      span, div {
+        max-width: 100px;
+        margin: 0 auto;
         padding: 5px;
         border-radius: 50px;
         background-color: rgba(255, 255, 255, 0.15);
