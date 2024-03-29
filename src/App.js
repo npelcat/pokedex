@@ -12,8 +12,8 @@ const App = () => {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/welcome" element={<Welcome />}></Route>
-        <Route path="/" element={<Home />}></Route>
+        <Route path="/" element={<Welcome />}></Route>
+        <Route path="/pokedex" element={<Home />}></Route>
         <Route path="/about" element={<About />}></Route>
         {/* path="*" fonctionne si jamais l'url ne correspond à rien de déclaré au dessus */}
         <Route path="*" element={<Welcome />}></Route>

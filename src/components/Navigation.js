@@ -6,6 +6,18 @@ const navigation = () => {
     <div className="navigation">
       <ul>
         <NavLink to="/" className={(nav) => (nav.isActive ? "nav-active" : "")}>
+          <li>
+            <img
+              className="pokeball"
+              src="./pokeball-icon.png"
+              alt="pokeball icon"
+            />
+          </li>
+        </NavLink>
+        <NavLink
+          to="/pokedex"
+          className={(nav) => (nav.isActive ? "nav-active" : "")}
+        >
           <li>accueil</li>
         </NavLink>
         <NavLink

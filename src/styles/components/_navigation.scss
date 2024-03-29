@@ -12,6 +12,16 @@
         transition: 0.2s;
         cursor: pointer;
 
+        .pokeball {
+          width: 25px;
+          margin-right: 20px;
+          transition: 0.3s ease;
+
+          &:hover {
+            transform: scale(1.3);
+          }
+        }
+
         &:hover {
           color: $color-3;
         }
