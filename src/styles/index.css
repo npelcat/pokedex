@@ -1,0 +1,405 @@
+@font-face {
+  font-family: "font-1";
+  src: url(../assets/fonts/JosefinSans-Medium.ttf);
+}
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  background: rgb(243, 243, 243);
+  font-family: "font-1", sans-serif;
+}
+
+li {
+  list-style-type: none;
+}
+
+.navigation ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 30px;
+}
+.navigation ul a {
+  text-decoration: none;
+  padding: 10px;
+}
+.navigation ul a li {
+  color: #61dafb;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  cursor: pointer;
+}
+.navigation ul a li .pokeball {
+  width: 25px;
+  margin-right: 20px;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+}
+.navigation ul a li .pokeball:hover {
+  -webkit-transform: scale(1.3);
+          transform: scale(1.3);
+}
+.navigation ul a li:hover {
+  color: #282c34;
+}
+.navigation ul .nav-active {
+  position: relative;
+}
+.navigation ul .nav-active::after {
+  content: "";
+  height: 4px;
+  width: 0;
+  background: #61dafb;
+  position: absolute;
+  border-radius: 10px;
+  bottom: 0px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  -webkit-animation: anim 0.3s ease forwards;
+  animation: anim 0.6s ease forwards;
+}
+@-webkit-keyframes anim {
+  to {
+    width: 100%;
+  }
+}
+@keyframes anim {
+  to {
+    width: 100%;
+  }
+}
+
+.logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 5px auto;
+  width: 200px;
+  border-radius: 20px;
+  padding: 5px 0;
+  -webkit-box-shadow: 0 2px 3px rgba(0, 0, 0, 0.307);
+          box-shadow: 0 2px 3px rgba(0, 0, 0, 0.307);
+  background: url(../../assets/img/main.jpg) center/cover;
+}
+.logo img {
+  height: 40px;
+}
+.logo h3 {
+  margin-left: 10px;
+  color: #61dafb;
+}
+
+.pokemons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 0 auto;
+}
+.pokemons .filters-container {
+  position: relative;
+  max-width: 800px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-bottom: 20px;
+  background: #282c34;
+  border-radius: 20px;
+  padding: 10px;
+  color: rgb(243, 243, 243);
+  -webkit-box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.452);
+          box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.452);
+}
+.pokemons .filters-container .range {
+  width: 90%;
+  margin-bottom: 20px;
+  -webkit-transform: translateY(1px);
+          transform: translateY(1px);
+}
+.pokemons .filters-container .range span, .pokemons .filters-container .range div {
+  max-width: 100px;
+  margin: 0 auto;
+  padding: 5px;
+  border-radius: 50px;
+  background-color: rgba(255, 255, 255, 0.15);
+}
+.pokemons .filters-container input[type=range] {
+  padding: 10px;
+}
+.pokemons .filters-container .radio-group {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.pokemons .filters-container input[type=radio] {
+  margin-right: 10px;
+}
+.pokemons .filters-container label {
+  margin: 0 20px 0 6px;
+  cursor: pointer;
+}
+.pokemons .filters-container label:hover {
+  color: aqua;
+}
+.pokemons input[type=text] {
+  padding: 10px;
+  border-radius: 40px;
+  font-size: 1.3rem;
+  border: 3px solid #61dafb;
+  outline: none;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  text-align: center;
+  width: 400px;
+  margin-bottom: 20px;
+}
+.pokemons input[type=text]:focus {
+  background: #61dafb;
+  border-radius: 4px;
+  color: rgb(243, 243, 243);
+}
+.pokemons button {
+  margin: 0 auto 20px;
+  background: none;
+  border: 2px solid #61dafb;
+  padding: 4px 10px;
+  border-radius: 10px;
+  cursor: pointer;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+.pokemons button:hover {
+  background: #61dafb;
+}
+.pokemons ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.card {
+  position: relative;
+  height: 200px;
+  width: 300px;
+  border-radius: 4px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+.card h2 {
+  font-size: 1rem;
+}
+.card:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+  z-index: 2;
+}
+.card:hover .infos {
+  opacity: 1;
+  -webkit-transform: scaleY(1);
+          transform: scaleY(1);
+}
+.card .infos {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.7);
+  color: rgb(243, 243, 243);
+  height: 100%;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: 10px;
+  opacity: 0;
+  -webkit-transform: scaleY(0);
+          transform: scaleY(0);
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+.card .title {
+  font-size: 1.2rem;
+  color: rgba(0, 0, 0, 0.7);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(128, 128, 128, 0.3);
+  border-radius: 5px;
+  padding: 5px;
+}
+.card .undertitle {
+  font-size: 0.8rem;
+  color: aqua;
+}
+.card img {
+  height: 200px;
+  width: 200px;
+  border-radius: 10px;
+}
+
+.about {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: justify;
+  margin: 20px;
+}
+.about img {
+  max-width: 300px;
+  margin: 20px;
+}
+@media screen and (max-width: 768px) {
+  .about {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+.about .about-me {
+  background-color: rgb(255, 255, 255);
+  padding: 20px;
+  border-radius: 10px;
+}
+.about .about-me a {
+  color: aqua;
+  background-color: rgba(128, 128, 128, 0.5);
+  padding: 2px;
+  border-radius: 5px;
+  text-decoration: none;
+}
+.about .about-me a:hover {
+  background-color: rgba(0, 0, 0, 0.574);
+}
+
+.welcome {
+  background: url("../../../public/pokemon-1536855_1920.png") center/cover;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.welcome a {
+  text-decoration: none;
+}
+.welcome .dresseur {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 25rem;
+  background-color: #e73d3d;
+  border: 0 solid #E5E7EB;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  color: #fdfbfb;
+  display: flex;
+  font-family: ui-sans-serif, system-ui, -apple-system, system-ui, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-size: 1rem;
+  font-weight: 700;
+  justify-content: center;
+  line-height: 1.75rem;
+  padding: 0.75rem 1.65rem;
+  position: relative;
+  text-align: center;
+  -webkit-text-decoration: none #000000 solid;
+          text-decoration: none #000000 solid;
+  text-decoration-thickness: auto;
+  width: 100%;
+  max-width: 460px;
+  position: relative;
+  cursor: pointer;
+  -webkit-transform: rotate(-2deg);
+          transform: rotate(-2deg);
+  -moz-user-select: none;
+   -ms-user-select: none;
+       user-select: none;
+  -webkit-user-select: none;
+  -ms-touch-action: manipulation;
+      touch-action: manipulation;
+}
+.welcome .dresseur:focus {
+  outline: 0;
+}
+.welcome .dresseur:after {
+  content: "";
+  position: absolute;
+  border: 1px solid #000000;
+  bottom: 4px;
+  left: 4px;
+  width: calc(100% - 1px);
+  height: calc(100% - 1px);
+}
+.welcome .dresseur:hover:after {
+  bottom: 2px;
+  left: 2px;
+}
+@media (min-width: 768px) {
+  .welcome .dresseur .dresseur {
+    padding: 0.75rem 3rem;
+    font-size: 1.25rem;
+  }
+}/*# sourceMappingURL=index.css.map */
