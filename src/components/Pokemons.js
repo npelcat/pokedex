@@ -4,7 +4,7 @@ import data from "../pokedex.json";
 
 const Pokemons = () => {
   //STATE
-  //La seule façon de pouvoir modifier la data, c'est de passer par setData.
+  //La seule façon de pouvoir modifier la data, c'est de passer par le setter (ici setRangeValue).
   const [rangeValue, setRangeValue] = useState(36);
   const radios = [
     "Grass",
@@ -26,9 +26,9 @@ const Pokemons = () => {
   const [selectedRadio, setSelectedRadio] = useState("");
 
   //RENDER
-  /*Le slice permet de découper le tableau data, ici on découpe de 0 à rangeValue (valeur de l'input range) */
-  /* Le .map permet de parcourir le tableau data et de créer un composant Card pour chaque élément du tableau. */
-  // Le "onChange" dans l'input permet de changer la valeur de l'input range (grâce au setter crée plus haut) et donc de changer le nombre de pays affichés.
+  /*Le slice permet de découper le tableau, ici on découpe de 0 à rangeValue (valeur de l'input range) */
+  /* Le .map permet de parcourir le tableau et de créer un composant Card pour chaque élément. */
+  // Le "onChange" dans l'input permet de changer la valeur de l'input range (grâce au setter crée plus haut) et donc de changer le nombre de pokémons affichés.
   return (
     <div className="pokemons">
       <ul className="filters-container">
